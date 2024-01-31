@@ -32,7 +32,7 @@ const connectDev = async () => {
   // await myDevice.open();
   // console.log(myDevice);
   // myDevice.addEventListener("inputreport", handleInpRpt);
-  device = await navigator.usb.requestDevice({ filters });
+  device = await navigator.usb.requestDevice({ filters: [] });
   console.log(device);
   try {
     const openResult = await device.open();

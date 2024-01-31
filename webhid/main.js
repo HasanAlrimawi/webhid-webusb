@@ -6,7 +6,7 @@ const showDevices = async () => {
   });
   console.log(devicesSupported);
   const opts = {
-    filters: devicesSupported,
+    filters: [],
   };
   const devices = await navigator.hid.requestDevice(opts);
   const myDevice = devices[0];
