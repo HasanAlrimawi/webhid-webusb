@@ -1,10 +1,10 @@
-import { DEVICES_LIST } from "./devices-list.js";
+// import { DEVICES_LIST } from "./devices-list.js";
 
 const showDevices = async () => {
-  const devicesSupported = DEVICES_LIST.map((device) => {
-    return { vendorId: device.vendorId, usagePage: device.usagePage };
-  });
-  console.log(devicesSupported);
+  // const devicesSupported = DEVICES_LIST.map((device) => {
+  //   return { vendorId: device.vendorId, usagePage: device.usagePage };
+  // });
+  // console.log(devicesSupported);
   const opts = {
     filters: [],
   };
@@ -26,11 +26,4 @@ const onHIDEntry = (event) => {
   console.log(`${base64String}     ??    `);
   console.log(data.buffer);
   console.log("\n\n");
-
-  // const value = data.getUint8;
-  // console.log(value);
-  // console.log(Object.keys(data.buffer)); // check the array buffer changes on every button click of the device in order to know what button has been clicked.
-  // console.log(data.buffer);
-  // console.log(device);
 };
-//sudo systemctl stop fwupd.service
